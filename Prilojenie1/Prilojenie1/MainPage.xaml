@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Prilojenie1.MainPage" WidthRequest="1080" HeightRequest="1920">
+
+    <StackLayout x:Name="StackLayout" Margin="20">
+        <Entry Placeholder="Логин" x:Name="LoginEntry" />
+        <Entry Placeholder="Пароль" IsPassword="True" x:Name="PasswordEntry" />
+        <Entry Placeholder="Повторите пароль" IsPassword="True" x:Name="ConfirmPasswordEntry" />
+        <Label>Дата рождения:</Label><DatePicker x:Name="BirthDatePicker" />
+        <Entry Placeholder="Номер телефона" x:Name="ContactInfoEntry" TextChanged="ContactInfoEntry_TextChanged"/>
+
+
+        <Picker x:Name="RolePicker" Title="Выберите роль">
+            <Picker.Items>
+                <x:String x:Uid="1">Клиент</x:String>
+                <x:String x:Uid="2">Библиотекарь</x:String>
+                <x:String x:Uid="3">Администратор</x:String>
+            </Picker.Items>
+        </Picker>
+
+
+        <Button Text="Цвет темы" Clicked="Button_Clicked"/>
+        <Button Text="Зарегистрироваться" Clicked="RegisterButton_Clicked" />
+        <Button Text="Выход" Clicked="ExitButton_Clicked"/>
+
+    </StackLayout>
+</ContentPage>
